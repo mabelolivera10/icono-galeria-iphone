@@ -1,0 +1,134 @@
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #f8f8f8;
+  perspective: 1000px;
+}
+
+.icon {
+  position: relative;
+  display: block;
+  width: 50vh;
+  height: 50vh;
+  transition: transform 200ms ease-out;
+  transform-style: preserve-3d;
+}
+.icon-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: #fcfcfc;
+  box-shadow: white 0 -4px 8px 2px inset, rgba(0, 0, 0, 0.02) 0 -6px 40px;
+}
+.icon-shadows span {
+  opacity: 0.4;
+  filter: blur(10px);
+  background: var(--color);
+  transform: translate(-50%, -107%) rotateZ(var(--rotate)) translateZ(-50px);
+}
+.icon-colors {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% 50%;
+  transform-style: preserve-3d;
+  transition: transform 250ms ease-out;
+  transform: translateZ(40px);
+}
+.icon-colors:hover {
+  transform: translateZ(60px);
+}
+.icon-colors span {
+  background: var(--color);
+  opacity: 0.9;
+  mix-blend-mode: multiply;
+  box-shadow: rgba(255, 255, 255, 0.2) 2px 2px 1px inset;
+}
+.icon span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 11.9047619048vh;
+  height: 18.5185185185vh;
+  border-radius: 11.9047619048vh;
+  transform: translate(-50%, -107%) rotateZ(var(--rotate));
+  transform-origin: 50% 107%;
+}
+.icon span:nth-child(1) {
+  --color: #faaa31;
+  --rotate: 0deg;
+}
+.icon span:nth-child(2) {
+  --color: #f6e422;
+  --rotate: 45deg;
+}
+.icon span:nth-child(3) {
+  --color: #b9d753;
+  --rotate: 90deg;
+}
+.icon span:nth-child(4) {
+  --color: #6cbeb0;
+  --rotate: 135deg;
+}
+.icon span:nth-child(5) {
+  --color: #79addc;
+  --rotate: 180deg;
+}
+.icon span:nth-child(6) {
+  --color: #a48dc1;
+  --rotate: 225deg;
+}
+.icon span:nth-child(7) {
+  --color: #d388b1;
+  --rotate: 270deg;
+}
+.icon span:nth-child(8) {
+  --color: #f37a5d;
+  --rotate: 315deg;
+}
+
+
+.made-with-love {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  top: 15PX; /* Cambiado de "bottom: 10px;" a "top: 0;" */
+  text-align: center;
+  font-size: 10px;
+  z-index: 9999;
+  font-family: arial;
+  color: #e06ae0;
+  font-weight: 600;
+}
+.made-with-love i {
+  font-style: normal;
+  font-size: 14px;
+  position: relative;
+  top: 2px;
+}
+.made-with-love a {
+  color: #c74f2b;
+  text-decoration: none;
+
+  
+}
+.made-with-love a:hover {
+  text-decoration: underline;
+}
+.made-with-love .dribble img {
+  max-width: 100%;
+  width: 26px;
+  position: relative;
+  top: -2px;
+  vertical-align: middle;
+}
+
+.made-with-love a {
+  font-weight: bold; /* Añadiendo negrita solo a los enlaces */
+}
